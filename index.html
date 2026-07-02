@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бурение скважин на воду под ключ — гарантия на скважину и монтаж</title>
+<meta name="description" content="Бурим скважины на воду под ключ. Честно про геологию, паспорт скважины, гарантия на скважину и монтаж. Рассчитайте стоимость за 1 минуту.">
+
+<!-- ==================================================================
+     ДАННЫЕ КОНТОРЫ — блок CONFIG в <script> ниже (одно место).
+     Фото-плейсхолдеры помечены комментом REPLACE.
+=================================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Cormorant:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  /* прохладная светлая база + живой синий «водяной» акцент */
+  --bg:#eef2f7;
+  --bg2:#ffffff;
+  --paper:#e2e9f3;
+  --ink:#0e1620;
+  --ink2:#2f3b48;
+  --muted:#5b6675;
+  --dim:#93a0b2;
+  --line:rgba(14,22,32,.09);
+  --line2:rgba(14,22,32,.15);
+  --acc:#1660d6;            /* насыщенный синий */
+  --acc-d:#0e46a8;
+  --acc-l:#22b6e6;          /* циан */
+  --acc-tint:#e3edfc;
+  --grad:linear-gradient(120deg,#1657d0 0%,#1596d6 52%,#22cbd6 100%); /* сине-голубой перелив */
+  --grad-soft:linear-gradient(120deg,#2b74e0,#18a6d8 55%,#2bd0d8);
+  --shadow:24px 40px 80px -42px rgba(16,40,80,.45);
+  --shadow-blue:0 30px 70px -34px rgba(22,96,214,.5);
+  --r:18px; --maxw:1240px;
+  --f-txt:'Onest',sans-serif;
+  --f-serif:'Cormorant',Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:auto}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-txt);font-weight:400;line-height:1.55;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body.no-scroll{overflow:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+::selection{background:var(--acc);color:#fff}
+
+/* зерно */
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");}
+
+/* ====== АНИМИРОВАННЫЙ СИНИЙ ПЕРЕЛИВ (aurora) ====== */
+.aurora{position:absolute;inset:0;overflow:hidden;z-index:0;pointer-events:none}
+.aurora b{position:absolute;border-radius:50%;filter:blur(52px);opacity:.5;mix-blend-mode:multiply;will-change:transform}
+.aurora .o1{width:560px;height:560px;background:#2f7bff;top:-14%;right:2%;animation:fl1 20s ease-in-out infinite}
+.aurora .o2{width:480px;height:480px;background:#12b6e6;top:18%;right:28%;animation:fl2 24s ease-in-out infinite}
+.aurora .o3{width:420px;height:420px;background:#25d3cf;top:44%;right:-4%;animation:fl3 22s ease-in-out infinite}
+@keyframes fl1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-60px,50px) scale(1.12)}}
+@keyframes fl2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(50px,-40px) scale(.92)}}
+@keyframes fl3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-40px,-50px) scale(1.1)}}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 30px}
+section{position:relative;z-index:2}
+
+.eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--acc);
+  display:inline-flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1.5px;background:var(--acc);opacity:.6}
+
+h1,h2,h3{font-family:var(--f-txt);font-weight:700;line-height:1.04;letter-spacing:-.025em}
+h1 em,h2 em,.serif{font-family:inherit;font-style:normal;font-weight:800;color:var(--acc);-webkit-text-fill-color:var(--acc)}
+.h-xl{font-size:clamp(40px,7.2vw,88px);font-weight:800}
+.h-lg{font-size:clamp(31px,4.7vw,60px);font-weight:800}
+.h-md{font-size:clamp(23px,2.6vw,34px);font-weight:700}
+p.lead{font-size:clamp(16px,1.4vw,19px);color:var(--ink2);max-width:54ch;line-height:1.6}
+
+/* ===== BUTTONS (3D tilt) ===== */
+.btn{position:relative;display:inline-flex;align-items:center;gap:12px;font-family:var(--f-txt);font-weight:700;
+  font-size:16px;cursor:pointer;border:none;padding:18px 32px;border-radius:60px;transform-style:preserve-3d;
+  transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s cubic-bezier(.2,.8,.2,1),background .3s;will-change:transform}
+.btn>*{transform:translateZ(22px)}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:var(--shadow-blue),0 4px 10px -6px rgba(22,96,214,.5)}
+.btn-primary::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(140deg,rgba(255,255,255,.4),transparent 42%);opacity:.6;transition:opacity .4s}
+.btn-primary:hover::after{opacity:1}
+.btn-primary .dot{width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.28);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.btn-ghost{background:var(--bg2);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line2),0 10px 24px -16px rgba(16,40,80,.4)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--acc),0 14px 30px -16px rgba(16,40,80,.4);color:var(--acc)}
+.btn-lg{padding:22px 42px;font-size:18px}
+
+/* ===== HEADER ===== */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .5s,border-color .5s,padding .5s,box-shadow .5s;
+  border-bottom:1px solid transparent;padding:24px 0}
+header.stuck{background:rgba(238,242,247,.82);backdrop-filter:blur(16px) saturate(1.2);border-color:var(--line);
+  padding:14px 0;box-shadow:0 10px 40px -30px rgba(16,40,80,.5)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-weight:800;font-size:23px;letter-spacing:-.03em;display:flex;align-items:center;gap:11px}
+.logo .mark{width:34px;height:34px;flex:0 0 auto;border-radius:11px;background:var(--grad);display:grid;place-items:center;
+  box-shadow:0 8px 20px -10px rgba(22,96,214,.7)}
+.logo .mark svg{width:20px;height:20px}
+.nav-links{display:flex;gap:32px;font-size:15px;color:var(--muted);font-weight:500}
+.nav-links a{transition:color .25s;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--acc);transition:width .3s}
+.nav-links a:hover{color:var(--ink)}.nav-links a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:22px}
+.nav-phone{font-weight:600;font-size:15px;white-space:nowrap;color:var(--acc)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px}
+.burger span{width:26px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+@media(max-width:960px){.nav-links,.nav-phone{display:none}.burger{display:flex}}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;padding:150px 0 90px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background:
+  radial-gradient(90% 80% at 82% 20%,rgba(37,190,230,.16),transparent 60%),
+  radial-gradient(70% 70% at 95% 90%,rgba(22,96,214,.12),transparent 60%)}
+#three-hero{position:absolute;inset:0;z-index:1}
+.hero-rig{position:absolute;right:2%;bottom:0;z-index:1;width:min(46%,620px);opacity:.95;display:none}
+.hero-inner{position:relative;z-index:3;max-width:820px}
+.hero .eyebrow{margin-bottom:28px;opacity:0}
+.hero h1{margin-bottom:26px;letter-spacing:-.035em}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.04em}
+.hero h1 .line span{display:block;transform:translateY(110%)}
+.hero .lead{margin-bottom:38px;opacity:0;color:var(--ink);font-weight:500;text-shadow:0 1px 16px rgba(238,242,247,.9)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-bottom:52px;opacity:0}
+.hero-note{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.bullets{display:flex;flex-wrap:wrap;gap:16px 34px;opacity:0}
+.bullet{display:flex;align-items:center;gap:13px;font-size:15px;color:var(--ink);font-weight:700;text-shadow:0 1px 14px rgba(238,242,247,.95)}
+.bullet .ic{width:38px;height:38px;flex:0 0 auto;border-radius:12px;display:grid;place-items:center;background:var(--bg2);
+  box-shadow:0 8px 20px -14px rgba(16,40,80,.5),inset 0 0 0 1px var(--line)}
+.bullet .ic svg{width:19px;height:19px;stroke:var(--acc);fill:none;stroke-width:1.8}
+.scroll-hint{position:absolute;bottom:34px;left:30px;z-index:3;font-size:11px;font-weight:600;letter-spacing:.24em;
+  color:var(--dim);display:flex;align-items:center;gap:11px;text-transform:uppercase}
+.scroll-hint .l{width:1.5px;height:36px;background:linear-gradient(var(--acc),transparent);animation:sc 2.4s infinite}
+@keyframes sc{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}
+  51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-width:960px){#three-hero{opacity:.4}.hero-rig{width:70%;opacity:.35}}
+/* hero с реальным фото */
+.hero-photo{position:absolute;inset:0;z-index:0;background:#0e1620 center/cover no-repeat;background-image:url('img/hero-rig.webp')}
+.hero-photo::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,var(--bg) 8%,rgba(238,242,247,.72) 36%,rgba(238,242,247,.18) 60%,transparent 84%)}
+.hero.has-photo #three-hero,.hero.has-photo .hero-rig,.hero.has-photo .cursor-drop,.hero.has-photo .aurora,.hero.has-photo .hero-bg{display:none!important}
+@media(max-width:760px){.hero-photo::after{background:linear-gradient(180deg,rgba(238,242,247,.7) 28%,rgba(238,242,247,.92) 66%,var(--bg))}}
+/* реальное фото в карточке объекта */
+.work img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+
+/* ===== STATS (синяя полоса-перелив) ===== */
+.stats{background:var(--grad);color:#fff;position:relative;overflow:hidden}
+.stats::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 120% at 80% 0%,rgba(255,255,255,.15),transparent 60%)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);position:relative;z-index:2}
+.stat{padding:52px 30px;border-left:1px solid rgba(255,255,255,.18)}
+.stat:first-child{border-left:none}
+.stat .num{font-weight:800;font-size:clamp(36px,4.2vw,58px);line-height:1;letter-spacing:-.03em}
+.stat .num .suf{opacity:.85}
+.stat .cap{margin-top:14px;font-size:14.5px;color:rgba(255,255,255,.8)}
+.trust{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 24px;padding:26px 0;
+  position:relative;z-index:2;font-weight:600;font-size:15.5px;text-align:center}
+.trust i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55);flex:0 0 auto}
+@media(max-width:760px){.stats-grid{grid-template-columns:1fr 1fr}
+  .stat{border-top:1px solid rgba(255,255,255,.18)}.stat:nth-child(-n+2){border-top:none}.stat:nth-child(odd){border-left:none}
+  .trust i{display:none}.trust{gap:8px 18px;font-size:14px}}
+
+.sec{padding:clamp(84px,11vh,150px) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:34px;margin-bottom:62px;flex-wrap:wrap}
+.sec-head .l{max-width:660px}.sec-head .eyebrow{margin-bottom:20px}
+.reveal{opacity:0;will-change:transform,opacity}
+
+/* ===== CARDS ===== */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--bg2);border-radius:var(--r);padding:36px 32px;position:relative;overflow:hidden;
+  box-shadow:0 2px 4px -2px rgba(16,40,80,.08),inset 0 0 0 1px var(--line);
+  transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.card::before{content:"";position:absolute;top:0;left:32px;right:32px;height:2px;background:var(--grad);
+  transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.card:hover{transform:translateY(-7px);box-shadow:var(--shadow),inset 0 0 0 1px var(--line)}
+.card:hover::before{transform:scaleX(1)}
+.card .ci{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;margin-bottom:24px;background:var(--acc-tint)}
+.card .ci svg{width:26px;height:26px;stroke:var(--acc);fill:none;stroke-width:1.6}
+.card h3{font-size:20px;font-weight:700;margin-bottom:12px;letter-spacing:-.01em}
+.card p{font-size:15px;color:var(--muted);line-height:1.62}
+.card .cn{position:absolute;top:30px;right:32px;font-family:var(--f-serif);font-style:italic;font-size:22px;color:var(--dim)}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.cards{grid-template-columns:1fr}}
+
+/* ===== TECH (иллюстрации техники) ===== */
+.tech{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tcard{position:relative;border-radius:var(--r);overflow:hidden;background:linear-gradient(160deg,#12233a,#0e1620);
+  color:#fff;min-height:290px;display:flex;flex-direction:column;
+  justify-content:flex-end;padding:28px;box-shadow:var(--shadow)}
+.tcard .tg{position:absolute;inset:0;z-index:0}
+.tcard .tg svg{width:100%;height:100%}
+.tcard .tg img{width:100%;height:100%;object-fit:cover;filter:saturate(.82) contrast(1.06) brightness(.9)}
+.tcard .tg::after{content:"";position:absolute;inset:0;background:linear-gradient(165deg,rgba(22,96,214,.4),rgba(14,22,32,.2) 60%);mix-blend-mode:multiply}
+.tcard::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(transparent 40%,rgba(9,14,22,.85))}
+.tcard .tc{position:relative;z-index:2}
+.tcard h4{font-size:20px;font-weight:700;margin-bottom:8px}
+.tcard p{font-size:14px;color:rgba(255,255,255,.72)}
+.tcard .tag{position:absolute;top:22px;left:22px;z-index:2;font-size:12px;font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;color:#fff;background:rgba(255,255,255,.14);padding:7px 13px;border-radius:30px;backdrop-filter:blur(6px)}
+@media(max-width:820px){.tech{grid-template-columns:1fr 1fr}.tcard:last-child{grid-column:1/-1}}
+@media(max-width:560px){.tech{grid-template-columns:1fr}}
+
+/* ===== PRICING ===== */
+.prices{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.pcard{background:var(--bg2);border-radius:var(--r);padding:30px 26px;position:relative;overflow:hidden;
+  box-shadow:inset 0 0 0 1px var(--line);transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+.pcard:hover{transform:translateY(-6px);box-shadow:var(--shadow),inset 0 0 0 1px var(--line)}
+.pcard.feat{background:linear-gradient(165deg,#123a6b,#0e1620);color:#fff;box-shadow:var(--shadow-blue)}
+.pcard .pbadge{position:absolute;top:18px;right:18px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  background:var(--grad);color:#fff;padding:6px 12px;border-radius:30px}
+.pcard .pd{font-size:14px;font-weight:600;color:var(--muted);letter-spacing:.02em}
+.pcard.feat .pd{color:rgba(255,255,255,.7)}
+.pcard .pp{font-size:34px;font-weight:800;letter-spacing:-.03em;margin:12px 0 4px}
+.pcard .pp span{font-size:16px;font-weight:600;color:var(--muted)}
+.pcard.feat .pp span{color:rgba(255,255,255,.7)}
+.pcard .pn{font-size:13.5px;color:var(--muted);margin-bottom:22px;line-height:1.5}
+.pcard.feat .pn{color:rgba(255,255,255,.65)}
+.pcard .btn{width:100%;justify-content:center;padding:14px}
+.pcard:not(.feat) .btn{background:var(--acc-tint);color:var(--acc);box-shadow:none}
+.price-note{font-size:13.5px;color:var(--muted);display:flex;align-items:center;gap:10px;margin-bottom:44px}
+.price-note svg{width:18px;height:18px;stroke:var(--acc);fill:none;stroke-width:1.8;flex:0 0 auto}
+.included{background:var(--acc-tint);border-radius:var(--r);padding:36px 34px;display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center}
+.included h3{font-size:22px;font-weight:800;letter-spacing:-.02em;max-width:12ch}
+.inc-list{display:grid;grid-template-columns:1fr 1fr;gap:14px 26px}
+.inc-list li{list-style:none;display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink2);font-weight:500}
+.inc-list li svg{width:22px;height:22px;flex:0 0 auto;stroke:var(--acc);fill:none;stroke-width:2;margin-top:1px}
+@media(max-width:900px){.prices{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.included{grid-template-columns:1fr;gap:22px}.inc-list{grid-template-columns:1fr}}
+@media(max-width:520px){.prices{grid-template-columns:1fr}}
+
+/* ===== COMPARE (песок vs известняк) ===== */
+.compare{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.compare .ccard:nth-child(2){margin-top:36px}
+.compare .ccard:nth-child(3){margin-top:72px}
+.ccard{border-radius:var(--r);padding:34px 30px 34px 60px;position:relative;overflow:hidden;
+  transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.ccard:hover{transform:translateY(-6px)}
+.ccard .side{position:absolute;left:0;top:0;bottom:0;width:42px;display:flex;align-items:center;justify-content:center;
+  writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg);font-weight:800;font-size:13px;letter-spacing:.24em;text-transform:uppercase}
+.ccard.sand{background:linear-gradient(160deg,#efe7d6,#e0d0b2);color:#3a3320;box-shadow:inset 0 0 0 1px rgba(0,0,0,.05)}
+.ccard.sand .side{background:rgba(61,51,32,.08);color:#9a7f4e}
+.ccard.lime{background:var(--grad);color:#fff;box-shadow:var(--shadow-blue)}
+.ccard.lime .side{background:rgba(255,255,255,.14);color:#fff}
+.ccard.info{background:var(--ink);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:40px 34px;box-shadow:var(--shadow)}
+.ccard.info .ii{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.08);margin-bottom:22px}
+.ccard.info .ii svg{width:28px;height:28px;stroke:var(--acc-l);fill:none;stroke-width:1.6}
+.ccard.info h3{font-size:20px;font-weight:800;margin-bottom:12px;letter-spacing:-.02em}
+.ccard.info p{font-size:15px;color:rgba(255,255,255,.72);line-height:1.6}
+.ccard .ct h3{font-size:23px;font-weight:800;letter-spacing:-.02em}
+.ccard .csub{font-size:14px;margin:6px 0 22px;opacity:.72}
+.crow{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid rgba(0,0,0,.1)}
+.ccard.lime .crow{border-color:rgba(255,255,255,.16)}
+.crow .k{font-size:14px;opacity:.7}
+.crow .v{font-size:15px;font-weight:700;text-align:right}
+@media(max-width:820px){.compare{grid-template-columns:1fr;gap:16px}
+  .compare .ccard:nth-child(2),.compare .ccard:nth-child(3){margin-top:0}}
+
+/* ===== SEPTIK (второе направление) ===== */
+.septik-box{position:relative;overflow:hidden;border-radius:28px;padding:clamp(40px,5vw,64px);
+  background:linear-gradient(155deg,#123a6b,#0e1620);color:#fff;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.septik-box .aurora b{opacity:.3;mix-blend-mode:screen}
+.septik-box .sk-in{position:relative;z-index:2}
+.septik-box .eyebrow{color:var(--acc-l)}.septik-box .eyebrow::before{background:var(--acc-l)}
+.septik-box h2{margin:18px 0 16px}.septik-box h2 em{-webkit-text-fill-color:var(--acc-l);color:var(--acc-l)}
+.septik-box .sp{color:rgba(255,255,255,.75);font-size:17px;margin-bottom:26px;max-width:46ch}
+.slist{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;margin-bottom:32px}
+.slist li{list-style:none;display:flex;gap:12px;align-items:flex-start;font-size:15px;font-weight:500;color:rgba(255,255,255,.9)}
+.slist li svg{width:22px;height:22px;flex:0 0 auto;stroke:var(--acc-l);fill:none;stroke-width:2;margin-top:1px}
+.septik-box .sk-art{position:relative;z-index:2;display:grid;place-items:center}
+.septik-box .sk-art svg{width:100%;max-width:340px}
+@media(max-width:820px){.septik-box{grid-template-columns:1fr;gap:30px}.septik-box .sk-art{order:-1;max-width:280px;margin:0 auto}.slist{grid-template-columns:1fr}}
+
+/* ===== PROCESS ===== */
+.proc{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line2)}
+.step{padding:38px 26px 42px;border-right:1px solid var(--line);position:relative;transition:background .4s}
+.step:last-child{border-right:none}.step:hover{background:var(--bg2)}
+.step .sd{font-family:var(--f-serif);font-style:italic;font-size:22px;color:var(--acc);margin-bottom:28px;
+  display:flex;align-items:center;justify-content:space-between}
+.step .sd .bar{flex:1;height:1.5px;background:var(--line2);margin-left:14px;position:relative;overflow:hidden}
+.step .sd .bar::after{content:"";position:absolute;left:0;top:0;height:100%;width:0;background:var(--grad);transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.step.in .sd .bar::after{width:100%}
+.step h3{font-size:19px;font-weight:700;margin-bottom:10px;letter-spacing:-.01em}
+.step p{font-size:14px;color:var(--muted)}
+@media(max-width:900px){.proc{grid-template-columns:1fr 1fr}.step{border-bottom:1px solid var(--line)}}
+@media(max-width:520px){.proc{grid-template-columns:1fr}.step{border-right:none}}
+
+/* ===== MID CTA ===== */
+.midcta{position:relative;overflow:hidden;background:var(--grad);color:#fff;padding:clamp(96px,13vh,164px) 0;margin:clamp(20px,4vw,50px) 0}
+.midcta .aurora b{opacity:.4;mix-blend-mode:screen}
+.midcta .in{position:relative;z-index:3;max-width:660px}
+.midcta .eyebrow{color:#fff}.midcta .eyebrow::before{background:#fff}
+.midcta h2{margin:20px 0}.midcta h2 em{-webkit-text-fill-color:var(--acc-l);color:var(--acc-l)}
+.midcta p{color:rgba(255,255,255,.85);margin-bottom:34px;font-size:18px}
+.midcta .btn-primary{background:#fff;color:var(--acc)}.midcta .btn-primary .dot{background:var(--acc)}
+
+/* ===== WORKS ===== */
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.work{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;
+  background:linear-gradient(150deg,var(--paper),#cdd8ea);box-shadow:inset 0 0 0 1px var(--line)}
+.work:nth-child(1){grid-row:span 2;aspect-ratio:auto}
+.work .ph{position:absolute;inset:0;display:grid;place-items:center;
+  background:repeating-linear-gradient(45deg,rgba(14,22,32,.02) 0 14px,transparent 14px 28px)}
+.work .ph svg{width:48px;height:48px;stroke:var(--dim);fill:none;opacity:.6}
+.work .meta{position:absolute;left:0;right:0;bottom:0;padding:24px;z-index:2;background:linear-gradient(transparent,rgba(9,14,22,.82));color:#fff}
+.work .meta .r{font-weight:600;font-size:12px;color:var(--acc-l);letter-spacing:.12em;text-transform:uppercase}
+.work .meta h4{font-size:18px;font-weight:700;margin-top:7px}
+.work .meta .d{font-size:13px;color:rgba(255,255,255,.75);margin-top:4px}
+@media(max-width:820px){.works{grid-template-columns:1fr 1fr}.work:nth-child(1){grid-row:auto;aspect-ratio:4/3}}
+@media(max-width:520px){.works{grid-template-columns:1fr}}
+
+/* ===== REVIEWS ===== */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev{background:var(--bg2);border-radius:var(--r);padding:34px;box-shadow:inset 0 0 0 1px var(--line)}
+.rev .stars{color:#f2a33c;font-size:15px;letter-spacing:3px;margin-bottom:18px}
+.rev p{font-size:15.5px;color:var(--ink2);line-height:1.68;margin-bottom:24px}
+.rev .who{display:flex;align-items:center;gap:14px}
+.rev .av{width:46px;height:46px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-weight:700;color:#fff;font-size:18px}
+.rev .who b{font-size:15px;display:block;font-weight:700}.rev .who span{font-size:13px;color:var(--muted)}
+.rev-note{margin-top:28px;padding:26px 30px;border-radius:16px;background:var(--acc-tint);display:flex;gap:18px;align-items:center;color:var(--ink2);font-size:15.5px}
+.rev-note svg{width:28px;height:28px;stroke:var(--acc);flex:0 0 auto;fill:none;stroke-width:1.6}
+@media(max-width:820px){.reviews{grid-template-columns:1fr}}
+
+/* ===== GUARANTEES ===== */
+.guar{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+.gitem{display:flex;gap:22px;padding:26px 0;border-bottom:1px solid var(--line)}
+.gitem:last-child{border-bottom:none}
+.gitem .gi{width:46px;height:46px;flex:0 0 auto;border-radius:12px;display:grid;place-items:center;background:var(--acc-tint)}
+.gitem .gi svg{width:22px;height:22px;stroke:var(--acc);fill:none;stroke-width:1.6}
+.gitem h4{font-size:18px;font-weight:700;margin-bottom:7px}.gitem p{font-size:14px;color:var(--muted)}
+.guar-doc{position:relative;border-radius:20px;aspect-ratio:3/4;background:var(--bg2);
+  box-shadow:var(--shadow),inset 0 0 0 1px var(--line);display:grid;place-items:center;overflow:hidden}
+.guar-doc .stamp{position:absolute;bottom:28px;right:28px;width:104px;height:104px;border-radius:50%;
+  box-shadow:inset 0 0 0 2px rgba(22,96,214,.35);color:var(--acc);display:grid;place-items:center;text-align:center;
+  font-weight:600;font-size:11px;letter-spacing:.08em;transform:rotate(-12deg);opacity:.85;padding:10px}
+.guar-doc .lines{width:70%}
+.guar-doc .lines i{display:block;height:9px;border-radius:4px;background:var(--line);margin-bottom:13px}
+.guar-doc .lines i:nth-child(2){width:80%}.guar-doc .lines i:nth-child(4){width:60%}
+.guar-doc .lines i.hd{height:16px;width:52%;background:var(--acc-tint);margin-bottom:24px}
+@media(max-width:820px){.guar{grid-template-columns:1fr;gap:40px}.guar-doc{max-width:340px}}
+
+/* ===== FAQ ===== */
+.faq{max-width:880px;margin:0 auto}
+.qa{border-bottom:1px solid var(--line)}
+.qa .q{width:100%;text-align:left;background:none;border:none;cursor:pointer;color:var(--ink);font-family:var(--f-txt);
+  font-size:19px;font-weight:700;padding:28px 54px 28px 0;position:relative;display:block;letter-spacing:-.01em}
+.qa .q::after{content:"";position:absolute;right:10px;top:50%;width:16px;height:16px;transform:translateY(-50%);
+  background:linear-gradient(var(--acc),var(--acc)) center/16px 2px no-repeat,linear-gradient(var(--acc),var(--acc)) center/2px 16px no-repeat;transition:transform .35s}
+.qa.open .q::after{transform:translateY(-50%) rotate(135deg)}
+.qa .a{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.2,.8,.2,1)}
+.qa .a p{padding:0 44px 28px 0;color:var(--muted);font-size:16px;line-height:1.66}
+
+/* ===== FINAL ===== */
+.final{padding:clamp(96px,14vh,170px) 0;text-align:center;position:relative;overflow:hidden}
+.final .in{position:relative;z-index:3;max-width:780px;margin:0 auto}
+.final h2{margin-bottom:24px}
+.final p{color:var(--ink2);font-size:19px;margin-bottom:40px;max-width:54ch;margin-inline:auto}
+.final .assure{margin-top:28px;font-size:14px;color:var(--muted)}
+
+/* ===== FOOTER ===== */
+footer{background:var(--ink);color:#fff;padding:70px 0 44px;position:relative;overflow:hidden}
+.footer-aurora b{opacity:.22}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;margin-bottom:52px;position:relative;z-index:2}
+.foot .logo{margin-bottom:20px;color:#fff}
+.foot p{color:rgba(255,255,255,.62);font-size:15px;max-width:34ch}
+.foot h5{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:20px}
+.foot a,.foot .li{display:block;color:rgba(255,255,255,.82);font-size:15px;margin-bottom:13px;transition:color .25s}
+.foot a:hover{color:var(--acc-l)}
+.foot-bot{border-top:1px solid rgba(255,255,255,.12);padding-top:30px;display:flex;justify-content:space-between;
+  gap:20px;flex-wrap:wrap;color:rgba(255,255,255,.45);font-size:13px;position:relative;z-index:2}
+@media(max-width:760px){.foot{grid-template-columns:1fr 1fr}.foot .brand{grid-column:1/-1}}
+
+/* ===== QUIZ MODAL ===== */
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.on{display:flex}
+.modal .bd{position:absolute;inset:0;background:rgba(9,14,22,.55);backdrop-filter:blur(6px);opacity:0;transition:opacity .4s}
+.modal.on .bd{opacity:1}
+.quiz{position:relative;z-index:2;width:min(560px,100%);background:var(--bg2);border-radius:24px;padding:40px 38px 36px;
+  box-shadow:0 60px 120px -40px rgba(16,40,80,.6);transform:translateY(24px) scale(.96);opacity:0;
+  transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .4s;max-height:92vh;overflow-y:auto}
+.modal.on .quiz{transform:none;opacity:1}
+.quiz-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}
+.quiz-top .eyebrow{margin:0}
+.quiz-close{background:none;border:none;color:var(--muted);font-size:28px;cursor:pointer;line-height:1;padding:4px 8px;transition:color .2s}
+.quiz-close:hover{color:var(--ink)}
+.qbar{height:5px;border-radius:5px;background:var(--line);overflow:hidden;margin-bottom:32px}
+.qbar i{display:block;height:100%;width:20%;background:var(--grad);transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.qstep{display:none}.qstep.on{display:block;animation:qin .5s cubic-bezier(.2,.8,.2,1)}
+@keyframes qin{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:none}}
+.qstep h3{font-size:24px;font-weight:700;margin-bottom:8px;letter-spacing:-.02em}
+.qstep .sub{color:var(--muted);font-size:14.5px;margin-bottom:26px}
+.opts{display:flex;flex-direction:column;gap:12px}
+.opt{display:flex;align-items:center;gap:15px;padding:18px 20px;border-radius:14px;cursor:pointer;
+  box-shadow:inset 0 0 0 1.5px var(--line2);transition:box-shadow .25s,background .25s,transform .25s;font-size:16px;font-weight:600;background:var(--bg)}
+.opt:hover{box-shadow:inset 0 0 0 1.5px var(--acc);background:var(--acc-tint);transform:translateX(3px)}
+.opt .box{width:23px;height:23px;border-radius:8px;box-shadow:inset 0 0 0 1.5px var(--line2);flex:0 0 auto;transition:.25s}
+.opt.sel{box-shadow:inset 0 0 0 1.5px var(--acc);background:var(--acc-tint)}
+.opt.sel .box{background:var(--acc);box-shadow:inset 0 0 0 1.5px var(--acc);position:relative}
+.opt.sel .box::after{content:"✓";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:14px;font-weight:700}
+.qnav{display:flex;justify-content:space-between;align-items:center;margin-top:30px;gap:16px}
+.qback{background:none;border:none;color:var(--muted);cursor:pointer;font-family:var(--f-txt);font-size:15px;font-weight:600;transition:color .2s}
+.qback:hover{color:var(--ink)}.qback[disabled]{opacity:0;pointer-events:none}
+.qfield input{width:100%;padding:20px 22px;border-radius:14px;background:var(--bg);color:var(--ink);font-family:var(--f-txt);
+  font-size:21px;font-weight:700;letter-spacing:.02em;outline:none;box-shadow:inset 0 0 0 1.5px var(--line2);transition:box-shadow .25s}
+.qfield input:focus{box-shadow:inset 0 0 0 2px var(--acc)}
+.qfield .lbl{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:12px;display:block}
+.qprivacy{font-size:12px;color:var(--dim);margin-top:16px;line-height:1.5}
+.qdone{text-align:center;padding:22px 0}
+.qdone .ok{width:78px;height:78px;border-radius:50%;margin:0 auto 26px;display:grid;place-items:center;background:var(--acc-tint)}
+.qdone .ok svg{width:38px;height:38px;stroke:var(--acc);fill:none;stroke-width:2}
+.qdone h3{font-size:27px;margin-bottom:12px}.qdone p{color:var(--muted);margin-bottom:28px}
+.qdone .dbtns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+.mmenu{position:fixed;inset:0;z-index:60;background:var(--bg);padding:104px 30px 40px;display:none;flex-direction:column;gap:6px}
+.mmenu.on{display:flex}
+.mmenu a{font-size:27px;font-weight:700;padding:15px 0;border-bottom:1px solid var(--line);letter-spacing:-.02em}
+.mmenu .mphone{margin-top:28px;font-size:20px;color:var(--acc);font-weight:700}
+.mclose{position:absolute;top:28px;right:28px;background:none;border:none;color:var(--ink);font-size:36px;cursor:pointer;line-height:1}
+
+/* примечание: reduce-motion намеренно НЕ глушит анимации — лендингу нужен вау-эффект;
+   страховка на случай, если JS-анимации не загрузятся, задаётся в скрипте (else-ветка) */
+
+/* ===== ПРЕЛОАДЕР ===== */
+.preloader{position:fixed;inset:0;z-index:9999;background:var(--ink);display:grid;place-items:center;
+  transition:transform .8s cubic-bezier(.76,0,.24,1),opacity .5s ease .5s}
+.preloader.done{transform:translateY(-100%);pointer-events:none}
+.pl-in{text-align:center;color:#fff}
+.pl-drop{width:60px;height:60px;margin:0 auto 20px;position:relative}
+.pl-drop svg{width:100%;height:100%;overflow:visible}
+.pl-drop .d{fill:none;stroke:url(#plg);stroke-width:1.6;stroke-dasharray:120;stroke-dashoffset:120;animation:plDraw 1.2s ease forwards}
+.pl-drop .fill{fill:var(--acc-l);opacity:0;transform-origin:center;animation:plFill .6s ease .9s forwards}
+@keyframes plDraw{to{stroke-dashoffset:0}}
+@keyframes plFill{from{opacity:0;transform:scale(.4)}to{opacity:.9;transform:scale(1)}}
+.pl-logo{font-weight:800;font-size:30px;letter-spacing:-.03em;opacity:0;animation:plUp .6s ease .5s forwards}
+@keyframes plUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.pl-bar{width:170px;height:3px;background:rgba(255,255,255,.14);border-radius:3px;overflow:hidden;margin:22px auto 0}
+.pl-bar i{display:block;height:100%;width:0;background:var(--grad);animation:plFillBar 1.15s cubic-bezier(.5,0,.2,1) forwards}
+@keyframes plFillBar{to{width:100%}}
+
+/* ===== КАПЛЯ-КУРСОР (hero) ===== */
+.cursor-drop{position:absolute;top:0;left:0;width:26px;height:26px;z-index:2;pointer-events:none;border-radius:50% 50% 50% 0;
+  transform:translate(-100px,-100px) rotate(45deg);background:radial-gradient(circle at 60% 35%,var(--acc-l),var(--acc));
+  box-shadow:0 0 30px 6px rgba(34,182,230,.35);opacity:0;transition:opacity .4s;mix-blend-mode:multiply}
+
+/* ===== ЖИВОЙ КАЛЬКУЛЯТОР ===== */
+.calc-box{background:var(--bg2);border-radius:var(--r);box-shadow:var(--shadow),inset 0 0 0 1px var(--line);
+  display:grid;grid-template-columns:1.15fr .85fr;overflow:hidden}
+.calc-l{padding:clamp(34px,4vw,52px)}
+.calc-l .clabel{font-size:14px;font-weight:600;color:var(--muted);margin-bottom:14px;display:flex;justify-content:space-between}
+.calc-l .clabel b{color:var(--acc);font-size:17px;font-weight:800}
+.crange{appearance:none;-webkit-appearance:none;width:100%;height:8px;border-radius:8px;outline:none;margin-bottom:34px;
+  background:linear-gradient(90deg,var(--acc) 0%,var(--acc) 40%,var(--line2) 40%,var(--line2) 100%)}
+.crange::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:#fff;cursor:pointer;
+  box-shadow:0 2px 10px rgba(16,40,80,.4),inset 0 0 0 6px var(--acc);transition:transform .15s}
+.crange::-webkit-slider-thumb:hover{transform:scale(1.12)}
+.crange::-moz-range-thumb{width:26px;height:26px;border:none;border-radius:50%;background:#fff;cursor:pointer;box-shadow:0 2px 10px rgba(16,40,80,.4),inset 0 0 0 6px var(--acc)}
+.ctypes{display:flex;flex-wrap:wrap;gap:10px}
+.ctype{padding:12px 16px;border-radius:12px;cursor:pointer;font-size:14px;font-weight:600;box-shadow:inset 0 0 0 1.5px var(--line2);transition:.2s}
+.ctype:hover{box-shadow:inset 0 0 0 1.5px var(--acc)}
+.ctype.on{background:var(--acc);color:#fff;box-shadow:inset 0 0 0 1.5px var(--acc)}
+.calc-r{background:linear-gradient(160deg,#123a6b,#0e1620);color:#fff;padding:clamp(34px,4vw,52px);display:flex;flex-direction:column;justify-content:center}
+.calc-r .cr-lbl{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-l);margin-bottom:12px}
+.calc-r .cr-val{font-size:clamp(34px,5vw,52px);font-weight:800;letter-spacing:-.03em;line-height:1}
+.calc-r .cr-val span{font-size:20px;color:rgba(255,255,255,.6)}
+.calc-r .cr-note{font-size:13px;color:rgba(255,255,255,.6);margin:16px 0 26px;line-height:1.5}
+.calc-r .btn{background:#fff;color:var(--acc)}.calc-r .btn .dot{background:var(--acc)}
+@media(max-width:820px){.calc-box{grid-template-columns:1fr}}
+
+/* ===== СКРОЛЛ-ПОГРУЖЕНИЕ (боковая шкала глубины) ===== */
+.depth-rail{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:30;
+  display:flex;align-items:center;gap:12px;opacity:0;transition:opacity .5s;pointer-events:none}
+.depth-rail.show{opacity:1}
+.dr-track{width:5px;height:44vh;max-height:360px;border-radius:5px;position:relative;overflow:hidden;
+  background:linear-gradient(180deg,#d8cbb2,#b99a6e 35%,#4f93cf 70%,#1660d6)}
+.dr-fill{position:absolute;left:0;right:0;bottom:0;top:0;background:rgba(255,255,255,.6);transform-origin:top;transform:scaleY(0)}
+.dr-bit{position:absolute;left:50%;top:0;width:15px;height:15px;transform:translate(-50%,-50%);border-radius:50%;
+  background:#fff;box-shadow:0 0 0 4px rgba(22,96,214,.3),0 2px 8px rgba(16,40,80,.5)}
+.dr-info{writing-mode:vertical-rl;text-orientation:mixed;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.05em}
+.dr-info .dr-val{font-size:15px}
+@media(max-width:1120px){.depth-rail{display:none}}
+
+/* ===== ВОЛНОВЫЕ ПЕРЕХОДЫ ===== */
+.wave{position:absolute;left:0;width:100%;line-height:0;z-index:1;pointer-events:none}
+.wave svg{display:block;width:100%;height:clamp(34px,5vw,62px)}
+.wave path{fill:var(--bg)}
+.wave.top{top:-1px}
+.wave.bot{bottom:-1px}
+.stats .trust{padding:64px 0}
+</style>
+</head>
+<body>
+<div class="preloader" id="preloader">
+  <div class="pl-in">
+    <div class="pl-drop"><svg viewBox="0 0 40 52"><defs><linearGradient id="plg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b74e0"/><stop offset="1" stop-color="#22cbd6"/></linearGradient></defs><path class="d" d="M20 2C12 16 6 24 6 34a14 14 0 0028 0c0-10-6-18-14-32z"/><path class="fill" d="M20 13C15.5 21 12 27 12 34a8 8 0 0016 0c0-7-3.5-13-8-21z"/></svg></div>
+    <div class="pl-logo">М1</div>
+    <div class="pl-bar"><i></i></div>
+  </div>
+</div>
+<div class="grain"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="logo">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8 8 6 11 6 15a6 6 0 0012 0c0-4-2-7-6-13z" stroke="#fff" stroke-width="1.6"/></svg></span>
+      <span data-cfg="company">М1</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#approach">Подход</a><a href="#tech">Техника</a><a href="#prices">Цены</a><a href="#works">Объекты</a><a href="#septik">Септик</a><a href="#faq">Вопросы</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-phone" data-cfg-href="tel" data-tgtext="Telegram">Telegram</a>
+      <button class="btn btn-primary" data-quiz style="padding:13px 26px;font-size:15px">Рассчитать</button>
+      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mmenu" id="mmenu">
+  <button class="mclose" id="mclose">×</button>
+  <a href="#approach">Подход</a><a href="#tech">Техника</a><a href="#prices">Цены</a><a href="#works">Объекты</a><a href="#septik">Септик</a><a href="#faq">Вопросы</a>
+  <a class="mphone" data-cfg-href="tel" data-tgtext="Написать в Telegram">Написать в Telegram</a>
+  <button class="btn btn-primary" data-quiz style="margin-top:26px">Рассчитать стоимость</button>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero has-photo" id="top">
+  <div class="hero-photo"></div>
+  <div class="hero-bg"></div>
+  <div class="aurora"><b class="o1"></b><b class="o2"></b><b class="o3"></b></div>
+  <div class="cursor-drop" id="cDrop"></div>
+  <canvas id="three-hero"></canvas>
+  <!-- SVG-иллюстрация буровой установки (виден, если 3D недоступен) -->
+  <svg class="hero-rig" id="heroRig" viewBox="0 0 400 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b74e0"/><stop offset="1" stop-color="#22cbd6"/></linearGradient></defs>
+    <!-- мачта -->
+    <path d="M200 20 L150 400 L250 400 Z" stroke="url(#rg)" stroke-width="4" fill="rgba(34,150,220,.06)"/>
+    <path d="M170 180 L230 180 M162 250 L238 250 M154 320 L246 320" stroke="url(#rg)" stroke-width="3"/>
+    <path d="M200 20 L200 400 M175 100 L225 100" stroke="url(#rg)" stroke-width="2.5" opacity=".7"/>
+    <!-- трос + буровая головка -->
+    <path d="M200 20 L200 360" stroke="#0e46a8" stroke-width="2" stroke-dasharray="4 5"/>
+    <rect x="188" y="352" width="24" height="34" rx="4" fill="url(#rg)"/>
+    <!-- база/грузовик -->
+    <rect x="70" y="400" width="260" height="46" rx="8" fill="url(#rg)"/>
+    <circle cx="120" cy="452" r="16" fill="#0e46a8"/><circle cx="280" cy="452" r="16" fill="#0e46a8"/>
+    <circle cx="120" cy="452" r="6" fill="#22cbd6"/><circle cx="280" cy="452" r="6" fill="#22cbd6"/>
+  </svg>
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="eyebrow" data-hero>Бурение скважин на воду · <span data-cfg="regionShort">Москва и область</span></span>
+      <h1>
+        <span class="line"><span>Вода на вашем участке —</span></span>
+        <span class="line"><span>за <em>один день</em>, честно,</span></span>
+        <span class="line"><span>с гарантией <em>5 лет</em></span></span>
+      </h1>
+      <p class="lead" data-hero>Бурим под ключ и показываем геологию до начала работ. Никаких «чудес» и сюрпризов по цене — вы платите за результат, который можно проверить.</p>
+      <div class="hero-cta" data-hero>
+        <button class="btn btn-primary btn-lg" data-quiz><span class="dot"></span>Рассчитать стоимость за 1 минуту</button>
+        <span class="hero-note">→ 5 коротких вопросов, без звонков-роботов</span>
+      </div>
+      <div class="bullets" data-hero>
+        <div class="bullet"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>Гарантия на скважину и монтаж</div>
+        <div class="bullet"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 19V5m0 14h16M8 15l3-4 3 2 4-6"/></svg></span>Честно про геологию района</div>
+        <div class="bullet"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M7 3h10l2 4v13a1 1 0 01-1 1H6a1 1 0 01-1-1V7z"/><path d="M9 12h6M9 16h6"/></svg></span>Паспорт скважины на руки</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span class="l"></span>Листайте</div>
+</section>
+
+<!-- ===================== TRUST BAR ===================== -->
+<section class="stats">
+  <div class="wave top"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0,0 L1440,0 L1440,38 C1200,64 960,18 720,38 C480,58 240,14 0,40 Z" fill="var(--bg)"/></svg></div>
+  <div class="wrap"><div class="trust">
+    <span>Гарантия на скважину и монтаж</span><i></i>
+    <span>Паспорт скважины на руки</span><i></i>
+    <span>Честно про геологию района</span><i></i>
+    <span>Работаем в Москве и области</span>
+  </div></div>
+  <div class="wave bot"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0,64 L1440,64 L1440,26 C1200,0 960,46 720,26 C480,6 240,50 0,24 Z" fill="var(--bg)"/></svg></div>
+</section>
+
+<!-- ===================== APPROACH ===================== -->
+<section class="sec" id="approach">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="l"><span class="eyebrow">01 — Почему нам доверяют</span><h2 class="h-lg">Скважину не видно.<br>Поэтому мы всё <em>показываем</em>.</h2></div>
+      <p class="lead">Вы отдаёте серьёзные деньги за то, что под землёй и на глаз не проверишь. Мы убрали этот страх — работаем открыто на каждом этапе.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><span class="cn">01</span><div class="ci"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Открыто и по фактам</h3><p>До старта объясняем, что будем делать, какие риски по воде и что реально можно гарантировать, а что нет.</p></div>
+      <div class="card reveal"><span class="cn">02</span><div class="ci"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></div><h3>Геология района честно</h3><p>Рассказываем, как устроена геология именно в вашем районе и почему цена не может быть одинаковой для всех.</p></div>
+      <div class="card reveal"><span class="cn">03</span><div class="ci"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 5-3.5 7.5-8 8-4.5-.5-8-3-8-8V7z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Гарантия на всё</h3><p>Гарантия не только на скважину, но и на монтаж. Если что-то не так — реально приезжаем и решаем.</p></div>
+      <div class="card reveal"><span class="cn">04</span><div class="ci"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg></div><h3>Контакты наших клиентов</h3><p>Дадим телефоны тех, кто уже бурил у нас, — можно позвонить и спросить напрямую, без прикрас.</p></div>
+      <div class="card reveal"><span class="cn">05</span><div class="ci"><svg viewBox="0 0 24 24"><path d="M8 12h8M12 8v8"/><circle cx="12" cy="12" r="9"/></svg></div><h3>Не давим и не уговариваем</h3><p>Разбираем вашу ситуацию по фактам и даём решить самим. Люди это чувствуют — поэтому и выбирают нас.</p></div>
+      <div class="card reveal"><span class="cn">06</span><div class="ci"><svg viewBox="0 0 24 24"><path d="M7 3h10l2 4v13a1 1 0 01-1 1H6a1 1 0 01-1-1V7z"/><path d="M9 12h6M9 16h6M9 8h3"/></svg></div><h3>Документы на руки</h3><p>Договор до начала работ и паспорт скважины после — с глубиной, дебитом и всеми характеристиками.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TECH ===================== -->
+<section class="sec" id="tech" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="l"><span class="eyebrow">02 — Наша техника</span><h2 class="h-lg">Своя <em>буровая</em>,<br>а не аренда «на день»</h2></div>
+      <p class="lead">Работаем на собственных установках — заходим и на свободный участок, и в узкий заезд, и по мёрзлому грунту зимой.</p>
+    </div>
+    <div class="tech">
+      <div class="tcard reveal"><span class="tag">Буровая установка</span>
+        <div class="tg"><img src="img/tech-urb.jpg" alt="УРБ на базе грузовика" loading="lazy"></div>
+        <div class="tc"><h4>УРБ на базе грузовика</h4><p>Мощная установка для глубоких скважин на известняк — до 100+ метров.</p></div></div>
+      <div class="tcard reveal"><span class="tag">Малогабаритная</span>
+        <div class="tg"><img src="img/tech-mgbu.jpg" alt="МГБУ для узких участков" loading="lazy"></div>
+        <div class="tc"><h4>МГБУ для узких участков</h4><p>Пройдёт там, где большой технике не заехать — за дом, между построек.</p></div></div>
+      <div class="tcard reveal"><span class="tag">Обустройство</span>
+        <div class="tg"><img src="img/tech-kesson.jpg" alt="Насос и кессон" loading="lazy"></div>
+        <div class="tc"><h4>Насос и кессон</h4><p>Смонтируем оборудование и заведём воду в дом — под ключ, с гарантией на монтаж.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section class="sec" id="prices" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="l"><span class="eyebrow">03 — Стоимость</span><h2 class="h-lg">Цены <em>прозрачно</em>,<br>от 1 900 ₽ за метр</h2></div>
+      <p class="lead">Стоимость зависит от диаметра и типа обсадной колонны. Ниже — ориентиры; финальную цену считаем по геологии вашего участка и фиксируем в договоре.</p>
+    </div>
+    <div class="prices">
+      <div class="pcard reveal"><div class="pd">Сталь ⌀ 133 мм</div><div class="pp">от 3 200 ₽<span> / м</span></div><div class="pn">Базовый вариант для дома и дачи. Надёжная стальная обсадная труба.</div><button class="btn" data-quiz>Рассчитать</button></div>
+      <div class="pcard feat reveal"><span class="pbadge">Хит</span><div class="pd">Сталь 133 + ПНД 117 мм</div><div class="pp">от 3 500 ₽<span> / м</span></div><div class="pn">Сталь снаружи + пищевой пластик внутри. Чистая вода без коррозии.</div><button class="btn btn-primary" data-quiz>Рассчитать</button></div>
+      <div class="pcard reveal"><div class="pd">Сталь ⌀ 159 мм</div><div class="pp">от 4 200 ₽<span> / м</span></div><div class="pn">Увеличенный диаметр — под высокий водозабор и мощный насос.</div><button class="btn" data-quiz>Рассчитать</button></div>
+      <div class="pcard reveal"><div class="pd">Сталь 159 + пластик 125</div><div class="pp">от 4 500 ₽<span> / м</span></div><div class="pn">Максимальная защита и дебит. Для больших домов и производства.</div><button class="btn" data-quiz>Рассчитать</button></div>
+    </div>
+    <div class="price-note reveal"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>Цены ориентировочные под замену на реальные. Точную стоимость называем после оценки участка — без «доплат по ходу».</div>
+    <div class="included reveal">
+      <h3>Что входит в стоимость</h3>
+      <ul class="inc-list">
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Выезд буровой техники и бурение на участке</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Обсадные трубы нужного диаметра</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Прокачка скважины до чистой воды</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Паспорт скважины и договор с гарантией</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CALCULATOR ===================== -->
+<section class="sec" id="calc" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="l"><span class="eyebrow">Калькулятор стоимости</span><h2 class="h-lg">Прикиньте цену <em>сами</em></h2></div>
+      <p class="lead">Двигайте глубину и выбирайте тип колонны — цена пересчитается сразу. Это ориентир; точную стоимость назовём после выезда.</p>
+    </div>
+    <div class="calc-box reveal">
+      <div class="calc-l">
+        <div class="clabel"><span>Глубина скважины</span><b id="calcDepth">60 м</b></div>
+        <input class="crange" id="calcRange" type="range" min="20" max="130" value="60">
+        <div class="clabel" style="margin-bottom:14px"><span>Тип обсадной колонны</span></div>
+        <div class="ctypes" id="calcTypes">
+          <div class="ctype" data-rate="3200">Сталь 133</div>
+          <div class="ctype on" data-rate="3500">Сталь + ПНД</div>
+          <div class="ctype" data-rate="4200">Сталь 159</div>
+          <div class="ctype" data-rate="4500">159 + пластик</div>
+        </div>
+      </div>
+      <div class="calc-r">
+        <div class="cr-lbl">Ориентировочно</div>
+        <div class="cr-val" id="calcPrice">≈ 210 000 <span>₽</span></div>
+        <div class="cr-note">Включая выезд, обсадку и прокачку до чистой воды. Точная цена — после оценки участка.</div>
+        <button class="btn btn-primary" data-quiz><span class="dot"></span>Оставить заявку</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMPARE ===================== -->
+<section class="sec" id="compare" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="l"><span class="eyebrow">04 — Какая скважина нужна</span><h2 class="h-lg">На песок или <em>на известняк</em>?</h2></div>
+      <p class="lead">Честно объясняем разницу, чтобы вы не переплатили за лишнее и не сэкономили там, где не стоит. Подскажем по геологии вашего района.</p>
+    </div>
+    <div class="compare">
+      <div class="ccard sand reveal">
+        <span class="side">На песок</span>
+        <div class="ct"><h3>Песчаная скважина</h3></div>
+        <div class="csub">Дешевле и быстрее. Для полива и технических нужд.</div>
+        <div class="crow"><span class="k">Глубина</span><span class="v">20–30 м</span></div>
+        <div class="crow"><span class="k">Дебит воды</span><span class="v">~1 м³/час</span></div>
+        <div class="crow"><span class="k">Срок службы</span><span class="v">до 15 лет</span></div>
+        <div class="crow"><span class="k">Вода</span><span class="v">Полив, техника</span></div>
+      </div>
+      <div class="ccard lime reveal">
+        <span class="side">На известняк</span>
+        <div class="ct"><h3>Артезианская</h3></div>
+        <div class="csub">Дороже, но надолго. Чистая питьевая вода в дом.</div>
+        <div class="crow"><span class="k">Глубина</span><span class="v">30–130 м</span></div>
+        <div class="crow"><span class="k">Дебит воды</span><span class="v">высокий, стабильный</span></div>
+        <div class="crow"><span class="k">Срок службы</span><span class="v">до 50 лет</span></div>
+        <div class="crow"><span class="k">Вода</span><span class="v">Питьевая, без ила</span></div>
+      </div>
+      <div class="ccard info reveal">
+        <div class="ii"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"/><path d="M12 2a15 15 0 000 20M12 2a15 15 0 010 20M2.5 12h19"/></svg></div>
+        <h3>Подскажем под ваш район</h3>
+        <p>Геология Москвы и области у нас изучена — знаем, на какой глубине вода именно у вас. Поэтому цену на артезианскую скважину считаем заранее, а не «на глаз».</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section class="sec" id="process" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="l"><span class="eyebrow">05 — Как мы работаем</span><h2 class="h-lg">Пять шагов<br>до <em>чистой воды</em></h2></div>
+      <p class="lead">Прозрачный процесс без «доплат по ходу». Все условия и цена фиксируются в договоре до первого метра.</p>
+    </div>
+    <div class="proc">
+      <div class="step reveal"><div class="sd">01<span class="bar"></span></div><h3>Выезд и геология</h3><p>Оцениваем участок, разбираем геологию района и подбираем глубину под вашу воду.</p></div>
+      <div class="step reveal"><div class="sd">02<span class="bar"></span></div><h3>Договор и цена</h3><p>Фиксируем стоимость и сроки в договоре. Дальше цифра не меняется.</p></div>
+      <div class="step reveal"><div class="sd">03<span class="bar"></span></div><h3>Бурение</h3><p>Заходим установкой, бурим до водоносного горизонта, ставим обсадную колонну.</p></div>
+      <div class="step reveal"><div class="sd">04<span class="bar"></span></div><h3>Обустройство</h3><p>Прокачиваем скважину, монтируем оборудование и заводим воду в дом.</p></div>
+      <div class="step reveal"><div class="sd">05<span class="bar"></span></div><h3>Паспорт и гарантия</h3><p>Передаём паспорт скважины и договор с гарантией на скважину и монтаж.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MID CTA ===================== -->
+<section class="midcta">
+  <div class="wave top"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0,0 L1440,0 L1440,38 C1200,64 960,18 720,38 C480,58 240,14 0,40 Z"/></svg></div>
+  <div class="aurora"><b class="o1"></b><b class="o2"></b><b class="o3"></b></div>
+  <div class="wrap">
+    <div class="in reveal">
+      <span class="eyebrow">Цена под ваш участок</span>
+      <h2 class="h-md" style="font-size:clamp(26px,3.4vw,42px);font-weight:800">Цена зависит от геологии.<br>Посчитаем её <em>честно</em> за минуту.</h2>
+      <p>Ответьте на 5 коротких вопросов — рассчитаем стоимость под ваш район и глубину. Без навязчивых звонков.</p>
+      <button class="btn btn-primary btn-lg" data-quiz><span class="dot"></span>Пройти расчёт</button>
+    </div>
+  </div>
+  <div class="wave bot"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0,64 L1440,64 L1440,26 C1200,0 960,46 720,26 C480,6 240,50 0,24 Z"/></svg></div>
+</section>
+
+<!-- ===================== WORKS ===================== -->
+<section class="sec" id="works" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="l"><span class="eyebrow">06 — Наши объекты</span><h2 class="h-lg">Пробурено <em>по районам</em></h2></div>
+      <p class="lead">Фото и видео с реальных объектов. Показываем технику в работе и готовые скважины — не картинки из интернета.</p>
+    </div>
+    <div class="works">
+      <!-- REPLACE: заменить .ph блоки на реальные фото объектов клиента -->
+      <div class="work reveal"><img src="img/work-kesson.webp" alt="Обустройство скважины — монтаж в кессоне" loading="lazy"><div class="meta"><div class="r">Обустройство</div><h4>Монтаж оголовка в кессоне</h4><div class="d">Заводим воду в дом под ключ</div></div></div>
+      <div class="work reveal"><div class="ph"><svg viewBox="0 0 24 24" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div><div class="meta"><div class="r">Западный р-н</div><h4>Дача, полив</h4><div class="d">Глубина 34 м · дебит 1.8 м³/ч</div></div></div>
+      <div class="work reveal"><div class="ph"><svg viewBox="0 0 24 24" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div><div class="meta"><div class="r">Восточный р-н</div><h4>Коттеджный посёлок</h4><div class="d">Глубина 88 м · дебит 3.1 м³/ч</div></div></div>
+      <div class="work reveal"><div class="ph"><svg viewBox="0 0 24 24" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div><div class="meta"><div class="r">Южный р-н</div><h4>Скважина для бани</h4><div class="d">Глубина 41 м · дебит 2.0 м³/ч</div></div></div>
+      <div class="work reveal"><div class="ph"><svg viewBox="0 0 24 24" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div><div class="meta"><div class="r">Центральный р-н</div><h4>Производство</h4><div class="d">Глубина 105 м · дебит 4.2 м³/ч</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SEPTIK ===================== -->
+<section class="sec" id="septik" style="padding-top:0">
+  <div class="wrap">
+    <div class="septik-box reveal">
+      <div class="aurora"><b class="o1"></b><b class="o3"></b></div>
+      <div class="sk-in">
+        <span class="eyebrow">Ещё направление</span>
+        <h2 class="h-md" style="font-size:clamp(26px,3.4vw,42px);font-weight:800">Септики и <em>автономная канализация</em> под ключ</h2>
+        <p class="sp">Не только вода, но и её отвод. Подберём и смонтируем септик под ваш дом, количество жильцов и тип грунта — с той же честностью и гарантией.</p>
+        <ul class="slist">
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Монтаж под ключ за 1 день</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Работает круглый год, зимой тоже</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Подбор под грунт и число жильцов</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Гарантия на септик и монтаж</li>
+        </ul>
+        <button class="btn btn-primary" data-quiz data-septik><span class="dot"></span>Рассчитать септик</button>
+      </div>
+      <div class="sk-art">
+        <svg viewBox="0 0 340 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="sk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2b74e0"/><stop offset="1" stop-color="#22cbd6"/></linearGradient></defs>
+          <!-- уровень земли -->
+          <path d="M10 90 H330" stroke="rgba(255,255,255,.25)" stroke-width="2" stroke-dasharray="6 6"/>
+          <!-- корпус септика (2 камеры) -->
+          <rect x="60" y="110" width="220" height="150" rx="18" stroke="url(#sk)" stroke-width="3" fill="rgba(43,116,224,.12)"/>
+          <path d="M170 110 V260" stroke="url(#sk)" stroke-width="2.5" opacity=".7"/>
+          <!-- люки -->
+          <rect x="90" y="88" width="44" height="24" rx="8" fill="url(#sk)"/>
+          <rect x="206" y="88" width="44" height="24" rx="8" fill="url(#sk)"/>
+          <!-- подводящая труба -->
+          <path d="M10 130 H60" stroke="url(#sk)" stroke-width="6" stroke-linecap="round"/>
+          <!-- перелив между камерами -->
+          <path d="M150 165 H190" stroke="url(#sk)" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+          <!-- уровни воды -->
+          <path d="M75 200 H160 M180 185 H265" stroke="#22cbd6" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="sec" id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="l"><span class="eyebrow">07 — Отзывы</span><h2 class="h-lg">Что говорят <em>клиенты</em></h2></div></div>
+    <div class="reviews">
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>«Понравилось, что сразу честно рассказали про геологию и не обещали воду на 20 метрах. Пробурили как договорились, паспорт отдали. Вода отличная.»</p><div class="who"><span class="av">А</span><div><b>Андрей М.</b><span>Дом для ПМЖ</span></div></div></div>
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>«Дали контакты прошлых клиентов — я позвонил, поговорил, и решился. Всё как обещали, цена в договоре не поменялась ни на рубль.»</p><div class="who"><span class="av">С</span><div><b>Светлана К.</b><span>Дача, полив</span></div></div></div>
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>«Не давили, не впаривали лишнее. Спокойно всё разобрали по фактам. Через год был вопрос по монтажу — приехали по гарантии и решили.»</p><div class="who"><span class="av">И</span><div><b>Игорь В.</b><span>Коттедж</span></div></div></div>
+    </div>
+    <div class="rev-note reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg>
+      <div>Хотите убедиться? <b>Дадим телефоны наших клиентов</b> — позвоните и спросите про нас напрямую, без прикрас.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GUARANTEES ===================== -->
+<section class="sec" id="guar" style="padding-top:0">
+  <div class="wrap">
+    <div class="guar">
+      <div>
+        <div class="sec-head reveal" style="margin-bottom:40px;display:block">
+          <span class="eyebrow" style="margin-bottom:20px">08 — Гарантии и документы</span>
+          <h2 class="h-lg">Всё на бумаге,<br>а не <em>на словах</em></h2>
+        </div>
+        <div class="guar-list">
+          <div class="gitem reveal"><span class="gi"><svg viewBox="0 0 24 24"><path d="M7 3h10l2 4v13a1 1 0 01-1 1H6a1 1 0 01-1-1V7z"/><path d="M9 12h6M9 16h6"/></svg></span><div><h4>Паспорт скважины</h4><p>Глубина, дебит, статический уровень, схема обсадной колонны — всё зафиксировано.</p></div></div>
+          <div class="gitem reveal"><span class="gi"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M12 3l8 4v6c0 5-3.5 7.5-8 8-4.5-.5-8-3-8-8V7z"/></svg></span><div><h4>Гарантия на скважину и монтаж</h4><p>Отвечаем не только за бурение, но и за смонтированное оборудование. Приезжаем и решаем.</p></div></div>
+          <div class="gitem reveal"><span class="gi"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg></span><div><h4>Договор с фиксой цены</h4><p>Стоимость и сроки закреплены до старта. Никаких «доплат по ходу бурения».</p></div></div>
+        </div>
+      </div>
+      <div class="guar-doc reveal"><div class="lines"><i class="hd"></i><i></i><i></i><i></i><i></i></div><div class="stamp">ПАСПОРТ<br>СКВАЖИНЫ</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="sec" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal" style="justify-content:center;text-align:center">
+      <div class="l"><span class="eyebrow" style="justify-content:center">09 — Частые вопросы</span><h2 class="h-lg">Отвечаем <em>честно</em></h2></div>
+    </div>
+    <div class="faq">
+      <div class="qa reveal"><button class="q">А если не найдёте воду?</button><div class="a"><p>Перед бурением мы разбираем геологию района и понимаем, на какой глубине здесь вода. Если по объективным причинам горизонт не тот — обсуждаем варианты честно, а не «бурим вслепую до бесконечности за ваш счёт».</p></div></div>
+      <div class="qa reveal"><button class="q">Почему цена не одинаковая для всех?</button><div class="a"><p>Потому что глубина воды и породы отличаются даже в соседних районах. Мы не даём «среднюю цену с потолка» — считаем под ваш конкретный участок и фиксируем в договоре.</p></div></div>
+      <div class="qa reveal"><button class="q">Сколько занимает бурение?</button><div class="a"><p>Само бурение типовой скважины для дома — обычно 1 день. Плюс обустройство и монтаж оборудования. Точные сроки называем после оценки участка.</p></div></div>
+      <div class="qa reveal"><button class="q">Когда лучше бурить — есть сезон?</button><div class="a"><p>Бурим круглый год. Зимой техника проходит там же, где и летом. Часто зимой даже удобнее — меньше очередь и проще заехать по мёрзлому грунту.</p></div></div>
+      <div class="qa reveal"><button class="q">Что с обслуживанием после?</button><div class="a"><p>Остаёмся на связи. По гарантии приезжаем и решаем вопросы по скважине и монтажу. Плюс всегда можно позвонить за консультацией.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL ===================== -->
+<section class="final">
+  <div class="hero-bg"></div>
+  <div class="aurora"><b class="o1"></b><b class="o3"></b></div>
+  <div class="wrap"><div class="in">
+    <span class="eyebrow reveal" style="justify-content:center;margin-bottom:24px">Готовы посчитать вашу скважину?</span>
+    <h2 class="h-xl reveal" style="font-size:clamp(34px,5.5vw,72px)">Вода на участке<br><em>ближе</em>, чем кажется</h2>
+    <p class="reveal">Пройдите короткий расчёт — назовём стоимость под ваш район и глубину. Честно, без звонков-роботов и навязывания.</p>
+    <div class="reveal" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <button class="btn btn-primary btn-lg" data-quiz><span class="dot"></span>Рассчитать стоимость</button>
+      <a class="btn btn-ghost btn-lg" data-cfg-href="tel" data-tgtext="Написать в Telegram">Написать в Telegram</a>
+    </div>
+    <div class="assure reveal">Ответим на все вопросы и дадим контакты клиентов, кто уже бурил у нас.</div>
+  </div></div>
+</section>
+
+<!-- ===================== DEPTH RAIL (скролл-погружение) ===================== -->
+<div class="depth-rail" id="depthRail">
+  <div class="dr-info"><span class="dr-val" id="drVal">0 м</span></div>
+  <div class="dr-track"><div class="dr-fill" id="drFill"></div><div class="dr-bit" id="drBit"></div></div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wave top"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0,0 L1440,0 L1440,40 C1160,66 900,16 660,40 C420,62 200,20 0,42 Z" fill="var(--bg)"/></svg></div>
+  <div class="aurora footer-aurora"><b class="o1"></b><b class="o2"></b></div>
+  <div class="wrap">
+    <div class="foot">
+      <div class="brand">
+        <a href="#top" class="logo"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8 8 6 11 6 15a6 6 0 0012 0c0-4-2-7-6-13z" stroke="#fff" stroke-width="1.6"/></svg></span><span data-cfg="company">М1</span></a>
+        <p>Бурение скважин на воду и монтаж септиков под ключ в <span data-cfg="region">Москве и области</span>. Честно, с гарантией и паспортом скважины.</p>
+      </div>
+      <div><h5>Разделы</h5><a href="#approach">Подход</a><a href="#prices">Цены</a><a href="#works">Объекты</a><a href="#septik">Септик</a><a href="#faq">Вопросы</a></div>
+      <div><h5>Контакты</h5><a data-cfg-tg="1" target="_blank">Написать в Telegram</a><div class="li" data-cfg="region">Москве и области</div></div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span data-cfg="companyFull">М1 — Скважина и Септик</span>, <span id="yr">2026</span>.</span>
+      <span>Демо-макет · данные и фото — плейсхолдеры под замену</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== QUIZ MODAL ===================== -->
+<div class="modal" id="modal">
+  <div class="bd" id="modalBd"></div>
+  <div class="quiz" id="quiz">
+    <div class="quiz-top"><span class="eyebrow" id="quizEyebrow">Расчёт стоимости · шаг 1 из 5</span><button class="quiz-close" id="quizClose">×</button></div>
+    <div class="qbar"><i id="qbarFill"></i></div>
+    <div id="quizBody"></div>
+    <div class="qnav" id="quizNav"><button class="qback" id="qBack" disabled>← Назад</button><button class="btn btn-primary" id="qNext" style="padding:14px 30px" disabled>Далее</button></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+<script>
+/* ================= CONFIG (меняй здесь) ================= */
+const CONFIG={company:'М1',companyFull:'М1 — Скважина и Септик',region:'Москве и области',regionShort:'Москва и область',telegram:'zeustyrranos'};
+(function(){const tg='https://t.me/'+CONFIG.telegram;
+  document.querySelectorAll('[data-cfg]').forEach(el=>{const k=el.getAttribute('data-cfg');if(CONFIG[k])el.textContent=CONFIG[k];});
+  document.querySelectorAll('[data-cfg-href="tel"]').forEach(el=>{el.textContent=el.dataset.tgtext||'Telegram';el.setAttribute('href',tg);if(el.tagName==='A')el.target='_blank';});
+  document.querySelectorAll('[data-cfg-tg]').forEach(el=>el.setAttribute('href',tg));
+  document.title='Бурение скважин на воду под ключ — '+CONFIG.companyFull;})();
+
+/* ================= ENV ================= */
+/* Анимации включены ПРИНУДИТЕЛЬНО, даже если в Windows выключены анимации интерфейса
+   (маркетинговый лендинг — нужен вау-эффект у всех посетителей). */
+const reduceMotion=false;
+const isMobile=matchMedia('(max-width:900px)').matches;
+const lowPower=navigator.hardwareConcurrency&&navigator.hardwareConcurrency<3;
+const use3D=!reduceMotion&&!isMobile&&!lowPower;
+
+/* ================= LENIS smooth scroll ================= */
+let lenis;
+if(!reduceMotion&&window.Lenis){
+  try{
+    lenis=new Lenis({lerp:.08,smoothWheel:true,wheelMultiplier:1});
+    if(window.gsap){gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);}
+    else{const raf=t=>{lenis.raf(t);requestAnimationFrame(raf)};requestAnimationFrame(raf);}
+    if(window.ScrollTrigger)lenis.on('scroll',ScrollTrigger.update);
+  }catch(e){ console.warn('Плавный скролл отключён:',e); lenis=null; }
+}
+const easeInOut=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();closeMenu();
+  if(lenis)lenis.scrollTo(t,{offset:-70,duration:1.6,easing:easeInOut});
+  else t.scrollIntoView({behavior:'smooth'});}));
+
+const hdr=document.getElementById('hdr');
+const onScroll=()=>hdr.classList.toggle('stuck',scrollY>40);
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+const mmenu=document.getElementById('mmenu');
+document.getElementById('burger').onclick=()=>{mmenu.classList.add('on');document.body.classList.add('no-scroll');};
+function closeMenu(){mmenu.classList.remove('on');document.body.classList.remove('no-scroll');}
+document.getElementById('mclose').onclick=closeMenu;
+
+/* ================= GSAP reveals (плавное проявление) ================= */
+if(window.gsap&&window.ScrollTrigger){
+  gsap.registerPlugin(ScrollTrigger);
+  const EASE='power3.out';
+  const tl=gsap.timeline({delay:.25});
+  tl.to('.hero h1 .line span',{y:'0%',duration:1.15,stagger:.11,ease:'power4.out'})
+    .to('.hero [data-hero]',{opacity:1,y:0,duration:1,stagger:.13,ease:EASE},'-=.7');
+  gsap.set('.hero [data-hero]',{y:16});
+
+  /* единый проявитель: batch сам группирует элементы и делает каскад — без конфликтов */
+  gsap.set('.reveal',{y:42});
+  ScrollTrigger.batch('.reveal',{
+    start:'top 88%',
+    onEnter:b=>gsap.to(b,{opacity:1,y:0,duration:.9,stagger:.09,ease:EASE,overwrite:true})
+  });
+  addEventListener('load',()=>ScrollTrigger.refresh());
+
+  gsap.utils.toArray('.step').forEach(s=>ScrollTrigger.create({trigger:s,start:'top 82%',onEnter:()=>s.classList.add('in')}));
+  if(!isMobile)gsap.utils.toArray('.work').forEach((w,i)=>gsap.fromTo(w,{y:i%2?24:0},{y:i%2?-24:0,ease:'none',scrollTrigger:{trigger:w,start:'top bottom',end:'bottom top',scrub:1.2}}));
+
+  gsap.utils.toArray('[data-count]').forEach(el=>{
+    const end=+el.dataset.count,suf=el.dataset.suf||'',tgt=el.querySelector('span')||el;
+    ScrollTrigger.create({trigger:el,start:'top 92%',once:true,onEnter:()=>{
+      gsap.to({v:0},{v:end,duration:1.8,ease:'power2.out',
+        onUpdate:function(){tgt.textContent=Math.round(this.targets()[0].v).toLocaleString('ru');},
+        onComplete:function(){el.innerHTML=end.toLocaleString('ru')+(suf?'<span class="suf">'+suf+'</span>':'');}});
+    }});
+  });
+}else{
+  document.querySelectorAll('.reveal').forEach(e=>{e.style.opacity=1;e.style.transform='none';e.style.filter='none';});
+  document.querySelectorAll('.hero h1 .line span').forEach(e=>e.style.transform='none');
+  document.querySelectorAll('.hero [data-hero]').forEach(e=>{e.style.opacity=1;e.style.transform='none';});
+  document.querySelectorAll('[data-count]').forEach(e=>{const t=e.querySelector('span')||e;t.textContent=(+e.dataset.count).toLocaleString('ru')+(e.dataset.suf||'');});
+}
+
+/* ================= 3D-кнопки ================= */
+if(!reduceMotion&&!isMobile){
+  document.querySelectorAll('.btn').forEach(btn=>{
+    btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();
+      const px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;
+      btn.style.transform='perspective(650px) rotateX('+(-py*12)+'deg) rotateY('+(px*16)+'deg) translate('+(px*9)+'px,'+(py*9)+'px) translateY(-3px)';});
+    btn.addEventListener('mouseleave',()=>btn.style.transform='');
+  });
+}
+
+/* ================= FAQ accordion ================= */
+document.querySelectorAll('.qa .q').forEach(q=>q.addEventListener('click',()=>{
+  const qa=q.parentElement,a=qa.querySelector('.a'),open=qa.classList.contains('open');
+  document.querySelectorAll('.qa').forEach(x=>{x.classList.remove('open');x.querySelector('.a').style.maxHeight=null;});
+  if(!open){qa.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+}));
+
+/* ================= 3D HERO (светлая палитра) ================= */
+function initThree(){
+  const canvas=document.getElementById('three-hero');if(!canvas||!window.THREE){showFallback();return;}
+  let renderer;try{renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true});}catch(e){showFallback();return;}
+  const scene=new THREE.Scene();const cam=new THREE.PerspectiveCamera(45,1,.1,100);cam.position.set(0,0,13);
+  const group=new THREE.Group();scene.add(group);
+  const layerColors=[0xd7e2f2,0xbcd0ea,0x8fb4dd,0x4f93cf,0x1f77c9];
+  for(let i=0;i<5;i++){
+    const geo=new THREE.CylinderGeometry(3.4,3.4,1.15,64,1,true);
+    const mat=new THREE.MeshStandardMaterial({color:layerColors[i],metalness:.05,roughness:.9,transparent:true,opacity:.94,side:THREE.DoubleSide});
+    const m=new THREE.Mesh(geo,mat);m.position.y=2.4-i*1.2;group.add(m);
+    const ring=new THREE.Mesh(new THREE.TorusGeometry(3.4,.016,8,64),new THREE.MeshBasicMaterial({color:0x1660d6,transparent:true,opacity:.3}));
+    ring.rotation.x=Math.PI/2;ring.position.y=1.8-i*1.2;group.add(ring);
+  }
+  group.add(new THREE.Mesh(new THREE.CylinderGeometry(.34,.34,7.6,32,1,true),new THREE.MeshStandardMaterial({color:0xeef4fb,metalness:.85,roughness:.35,side:THREE.DoubleSide})));
+  group.add(new THREE.Mesh(new THREE.CylinderGeometry(.22,.22,7.6,24),new THREE.MeshBasicMaterial({color:0x123a6b})));
+  const water=new THREE.Mesh(new THREE.CircleGeometry(3.2,64),new THREE.MeshBasicMaterial({color:0x22b6e6,transparent:true,opacity:.3}));
+  water.rotation.x=-Math.PI/2;water.position.y=-3.1;group.add(water);
+  scene.add(Object.assign(new THREE.PointLight(0x22b6e6,2.2,12),{position:new THREE.Vector3(0,-3,0)}));
+  const pc=90,pgeo=new THREE.BufferGeometry(),pos=new Float32Array(pc*3),spd=[];
+  for(let i=0;i<pc;i++){const a=Math.random()*Math.PI*2,r=Math.random()*.28;pos[i*3]=Math.cos(a)*r;pos[i*3+1]=-3+Math.random()*7;pos[i*3+2]=Math.sin(a)*r;spd.push(.006+Math.random()*.013);}
+  pgeo.setAttribute('position',new THREE.BufferAttribute(pos,3));
+  group.add(new THREE.Points(pgeo,new THREE.PointsMaterial({color:0x1660d6,size:.055,transparent:true,opacity:.75})));
+  scene.add(new THREE.AmbientLight(0xffffff,.9));
+  const key=new THREE.DirectionalLight(0xffffff,.9);key.position.set(5,7,8);scene.add(key);
+  const rim=new THREE.DirectionalLight(0x22b6e6,.5);rim.position.set(-6,2,-4);scene.add(rim);
+  group.rotation.x=.18;group.position.x=2.6;
+  let mx=0,my=0,tx=0,ty=0;addEventListener('mousemove',e=>{mx=(e.clientX/innerWidth-.5);my=(e.clientY/innerHeight-.5);});
+  function resize(){const w=canvas.clientWidth||innerWidth,h=canvas.clientHeight||innerHeight;renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();}
+  new ResizeObserver(resize).observe(canvas);resize();
+  let running=true;new IntersectionObserver(es=>{running=es[0].isIntersecting;},{threshold:.02}).observe(document.querySelector('.hero'));
+  const clock=new THREE.Clock();
+  (function tick(){requestAnimationFrame(tick);if(!running)return;const t=clock.getElapsedTime();
+    group.rotation.y+=.002;tx+=(mx-tx)*.04;ty+=(my-ty)*.04;group.rotation.z=tx*.1;group.rotation.x=.18-ty*.1;
+    const p=pgeo.attributes.position.array;for(let i=0;i<pc;i++){p[i*3+1]+=spd[i];if(p[i*3+1]>4)p[i*3+1]=-3;}
+    pgeo.attributes.position.needsUpdate=true;water.material.opacity=.24+Math.sin(t*1.4)*.06;renderer.render(scene,cam);})();
+  if(window.ScrollTrigger)ScrollTrigger.create({trigger:'.hero',start:'top top',end:'bottom top',scrub:1,onUpdate:s=>{group.position.y=-s.progress*3;group.rotation.x=.18+s.progress*.45;}});
+}
+function showFallback(){const c=document.getElementById('three-hero');if(c)c.style.display='none';const r=document.getElementById('heroRig');if(r)r.style.display='block';}
+if(use3D){try{ if(window.THREE) initThree(); else showFallback(); }catch(e){ console.warn('3D отключён:',e); showFallback(); }}else showFallback();
+
+/* ================= QUIZ ================= */
+const QUIZ_WELL=[
+  {q:'Что планируете бурить?',sub:'Это влияет на глубину и обвязку скважины',opts:['Скважину для дома (ПМЖ)','Для дачи, полива','Для бани / хозблока','Для производства']},
+  {q:'Знаете примерную глубину?',sub:'Если нет — подскажем по геологии района',opts:['До 30 метров','30–70 метров','Больше 70 метров','Не знаю, нужен совет']},
+  {q:'Когда планируете бурить?',sub:'Поможем подобрать удобное окно',opts:['В этом месяце','В этом сезоне','Пока прицениваюсь']},
+  {q:'Есть подъезд для буровой техники?',sub:'Установке нужен заезд к точке бурения',opts:['Да, свободный заезд','Заезд узкий','Пока не знаю']},
+  {q:'Куда отправить расчёт?',sub:'Свяжемся, ответим на вопросы и назовём цену. Без спама.',phone:true}
+];
+const QUIZ_SEPTIK=[
+  {q:'Для какого объекта септик?',sub:'От этого зависит объём и модель',opts:['Дом для ПМЖ','Дача (сезонно)','Баня / хозблок']},
+  {q:'Сколько человек проживает?',sub:'Считаем нагрузку на септик',opts:['1–2 человека','3–4 человека','5 и больше']},
+  {q:'Какой грунт на участке?',sub:'Если не знаете — подскажем по району',opts:['Песок','Глина','Высокие грунтовые воды','Не знаю']},
+  {q:'Когда планируете монтаж?',sub:'Поможем подобрать удобное окно',opts:['В этом месяце','В этом сезоне','Пока прицениваюсь']},
+  {q:'Куда отправить расчёт?',sub:'Свяжемся, ответим на вопросы и назовём цену. Без спама.',phone:true}
+];
+let quiz=QUIZ_WELL, quizTitle='Расчёт стоимости';
+let step=0;const answers=[];
+const modal=document.getElementById('modal'),quizBody=document.getElementById('quizBody');
+const qbar=document.getElementById('qbarFill'),qEye=document.getElementById('quizEyebrow');
+const qNav=document.getElementById('quizNav'),qBack=document.getElementById('qBack'),qNext=document.getElementById('qNext');
+function openQuiz(e){
+  const septik = e&&e.currentTarget&&e.currentTarget.hasAttribute('data-septik');
+  quiz = septik?QUIZ_SEPTIK:QUIZ_WELL; quizTitle = septik?'Расчёт септика':'Расчёт стоимости';
+  step=0; answers.length=0; renderStep();
+  modal.classList.add('on');document.body.classList.add('no-scroll');if(lenis)lenis.stop();
+}
+function closeQuiz(){modal.classList.remove('on');document.body.classList.remove('no-scroll');if(lenis)lenis.start();}
+document.querySelectorAll('[data-quiz]').forEach(b=>b.addEventListener('click',openQuiz));
+document.getElementById('quizClose').onclick=closeQuiz;document.getElementById('modalBd').onclick=closeQuiz;
+addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('on'))closeQuiz();});
+function renderStep(){const s=quiz[step];
+  qbar.style.width=((step+1)/quiz.length*100)+'%';
+  qEye.textContent=quizTitle+' · шаг '+(step+1)+' из '+quiz.length;
+  qNav.style.display='flex';qBack.disabled=step===0;
+  if(s.phone){
+    quizBody.innerHTML='<div class="qstep on"><h3>'+s.q+'</h3><p class="sub">'+s.sub+'</p><div class="qfield"><label class="lbl">Ваш телефон</label><input id="phoneInp" type="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel"></div><p class="qprivacy">Нажимая «Получить расчёт», вы соглашаетесь на обработку данных. Мы не передаём номер третьим лицам.</p></div>';
+    qNext.textContent='Получить расчёт';qNext.disabled=true;
+    const inp=document.getElementById('phoneInp');inp.focus();
+    inp.addEventListener('input',()=>{maskPhone(inp);qNext.disabled=inp.value.replace(/\D/g,'').length<11;});
+  }else{
+    let html='<div class="qstep on"><h3>'+s.q+'</h3><p class="sub">'+s.sub+'</p><div class="opts">';
+    s.opts.forEach((o,i)=>{html+='<div class="opt'+(answers[step]===i?' sel':'')+'" data-i="'+i+'"><span class="box"></span>'+o+'</div>';});
+    html+='</div></div>';quizBody.innerHTML=html;
+    qNext.textContent=step===quiz.length-2?'К последнему шагу':'Далее';qNext.disabled=answers[step]===undefined;
+    quizBody.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{answers[step]=+o.dataset.i;
+      quizBody.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));o.classList.add('sel');qNext.disabled=false;setTimeout(next,260);});
+  }
+}
+function maskPhone(inp){let d=inp.value.replace(/\D/g,'');if(d[0]==='8')d='7'+d.slice(1);if(d[0]!=='7')d='7'+d;
+  d=d.slice(0,11);let r='+7';if(d.length>1)r+=' ('+d.slice(1,4);if(d.length>=5)r+=') '+d.slice(4,7);
+  if(d.length>=8)r+='-'+d.slice(7,9);if(d.length>=10)r+='-'+d.slice(9,11);inp.value=r;}
+function next(){if(step<quiz.length-1){step++;renderStep();}else finish();}
+function finish(){qbar.style.width='100%';qNav.style.display='none';
+  quizBody.innerHTML='<div class="qdone"><div class="ok"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div><h3>Спасибо! Заявка принята</h3><p>Свяжемся в ближайшее время, ответим на вопросы и рассчитаем стоимость под ваш участок.</p><div class="dbtns"><a class="btn btn-primary" href="https://t.me/'+CONFIG.telegram+'" target="_blank">Написать в Telegram</a></div></div>';
+  qEye.textContent='Готово';}
+qNext.onclick=next;qBack.onclick=()=>{if(step>0){step--;renderStep();}};
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* ================= ПРЕЛОАДЕР ================= */
+(function(){const pl=document.getElementById('preloader');if(!pl)return;
+  const hide=()=>pl.classList.add('done');
+  addEventListener('load',()=>setTimeout(hide,1150));
+  setTimeout(hide,3200); // страховка, если load долго
+})();
+
+/* ================= КАПЛЯ-КУРСОР (hero) ================= */
+(function(){const d=document.getElementById('cDrop'),hero=document.querySelector('.hero');
+  if(!d||!hero||isMobile)return;
+  let x=0,y=0,tx=0,ty=0;
+  hero.addEventListener('mousemove',e=>{const r=hero.getBoundingClientRect();tx=e.clientX-r.left;ty=e.clientY-r.top;d.style.opacity='.8';});
+  hero.addEventListener('mouseleave',()=>d.style.opacity='0');
+  (function loop(){x+=(tx-x)*.13;y+=(ty-y)*.13;d.style.transform='translate('+(x-13)+'px,'+(y-13)+'px) rotate(45deg)';requestAnimationFrame(loop);})();
+})();
+
+/* ================= ЖИВОЙ КАЛЬКУЛЯТОР ================= */
+(function(){const r=document.getElementById('calcRange');if(!r)return;
+  const dLbl=document.getElementById('calcDepth'),price=document.getElementById('calcPrice'),types=document.getElementById('calcTypes');
+  let rate=3500;
+  function calc(){const depth=+r.value;dLbl.textContent=depth+' м';
+    const pct=(depth-r.min)/(r.max-r.min)*100;
+    r.style.background='linear-gradient(90deg,var(--acc) 0%,var(--acc) '+pct+'%,var(--line2) '+pct+'%,var(--line2) 100%)';
+    const total=Math.round(depth*rate/1000)*1000;
+    price.innerHTML='≈ '+total.toLocaleString('ru')+' <span>₽</span>';}
+  r.addEventListener('input',calc);
+  types.querySelectorAll('.ctype').forEach(t=>t.onclick=()=>{
+    types.querySelectorAll('.ctype').forEach(x=>x.classList.remove('on'));t.classList.add('on');rate=+t.dataset.rate;calc();});
+  calc();
+})();
+
+/* ================= СКРОЛЛ-ПОГРУЖЕНИЕ (боковая шкала) ================= */
+(function(){const rail=document.getElementById('depthRail'),bit=document.getElementById('drBit'),
+  fill=document.getElementById('drFill'),val=document.getElementById('drVal');
+  if(!rail)return;const MAX=62;
+  function upd(){const h=document.documentElement,total=h.scrollHeight-innerHeight;
+    const p=total>0?Math.min(1,Math.max(0,scrollY/total)):0;
+    bit.style.top=(p*100)+'%';fill.style.transform='scaleY('+p+')';
+    val.textContent=(p>=.99?MAX+' м · вода':Math.round(p*MAX)+' м');
+    rail.classList.toggle('show',scrollY>innerHeight*.6 && p<.99);}
+  addEventListener('scroll',upd,{passive:true});upd();
+})();
+</script>
+</body>
+</html>
